@@ -12,5 +12,10 @@ RSpec.describe StaticPagesController do
       get static_pages_help_url
       assert_response :success
     end
+
+    it 'should get about' do
+      get static_pages_about_url
+      assert_response :success
+    end
   end
 end
