@@ -27,5 +27,16 @@ RSpec.describe 'users signup' do
       follow_redirect!
       assert_template 'users/show'
     end
+
+    it "should be logged in after sign up" do
+      get signup_path
+      post users_path, params: { user: { name: "Example User",
+                                         email: "user@example.com",
+                                         password: "password",
+                                         password_confirmation: "password" }}
+      follow_redirect!
+      assert_template 'users/show'
+      expect(session[:user_id]).to_not be(nil)
+    end
   end
 end
