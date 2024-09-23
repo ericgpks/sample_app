@@ -34,4 +34,20 @@ RSpec.describe "users login" do
       expect(flash.empty?).to be(true)
     end
   end
+
+  describe "login with valid information followed by logout" do
+    let(:user) { create(:user) }
+    it "should login and log out" do
+      post login_path, params: { session: { email: user.email, password: user.password } }
+      expect(redirect_to(user))
+      follow_redirect!
+      expect(session[:user_id]).to eq(user.id)
+
+      delete logout_path
+      expect(response.status).to eq(303)
+      expect(session[:user_id]).to be(nil)
+      expect(redirect_to(root_url))
+      follow_redirect!
+    end
+  end
 end
