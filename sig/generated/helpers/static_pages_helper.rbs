@@ -1,0 +1,4 @@
+# Generated from app/helpers/static_pages_helper.rb with RBS::Inline
+
+module StaticPagesHelper
+end

@@ -1,0 +1,5 @@
+# Generated from app/helpers/users_helper.rb with RBS::Inline
+
+module UsersHelper
+  def gravatar_for: (untyped user, ?size: untyped) -> untyped
+end
