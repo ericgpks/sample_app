@@ -1,0 +1,11 @@
+# Generated from app/helpers/sessions_helper.rb with RBS::Inline
+
+module SessionsHelper
+  def log_in: (untyped user) -> untyped
+
+  def log_out: () -> untyped
+
+  def current_user: () -> untyped
+
+  def logged_in?: () -> untyped
+end
