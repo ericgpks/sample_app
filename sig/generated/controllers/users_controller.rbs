@@ -2,16 +2,12 @@
 
 class UsersController < ApplicationController
   def new: () -> untyped
-          | ...
 
   def show: () -> untyped
-          | ...
 
   def create: () -> untyped
-            | ...
 
   private
 
   def user_params: () -> untyped
-                | ...
 end
