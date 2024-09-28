@@ -1,3 +1,0 @@
-module ApplicationHelper
-  def full_title: -> untyped
-end
